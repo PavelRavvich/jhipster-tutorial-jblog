@@ -4,5 +4,10 @@
     </div>
     <div class="col-md-9">
         <h1 class="display-4">Welcome, Java Hipster blog!</h1>
+        <div *ngFor="let post of posts">
+            <h2>{{post.title}}</h2>
+            <p [innerHTML]="post.body"></p>
+            <small>Written by: {{post.author}}</small>
+        </div>
     </div>
 </div>
